@@ -1,0 +1,32 @@
+
+// Устройства X-Large (большие настольные компьютеры, менее 1400 пикселей)
+@mixin X-Desktop {
+  @media screen and (max-width: 1399px) {
+    @content;
+  }
+}
+// Устройства Large (настольные компьютеры, менее 1200 пикселей)
+@mixin Desktop {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+// Устройства Medium (планшеты, менее 992 пикселей)
+@mixin Tablet {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+// Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
+@mixin Mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+// Устройства X-Small (портретные телефоны, менее 576 пикселей)
+@mixin X-Mobile {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
