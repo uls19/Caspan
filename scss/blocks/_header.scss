@@ -1,0 +1,150 @@
+.header {
+    max-width: 1920px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    height: 820px;
+}
+
+
+
+.header__top-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+}
+
+.header__top-contact {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.header__link-mail,
+.header__link-tel {
+    padding-left: 38px;
+    font-family: $font-family;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $black;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.header__link-mail span,
+.header__link-tel span {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $black;
+    opacity: 0.5;
+}
+
+.header__link-mail {
+    background-image: url(./../img/sms-tracking.svg);
+}
+
+.header__link-tel {
+    background-image: url(./../img/call-calling.svg);
+}
+
+.header__right-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__top-lang {
+    display: flex;
+    align-items: center;
+    border: 1px solid $gray-border;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.header__lang {
+    padding: 20px 44px 20px 54px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $black;
+    background-image: url(./../img/global.svg),
+        url(./../img/polygon1.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 24px 24px, 14px 5px;
+    background-position: left 20px center, right 20px center;
+}
+
+.button-link {
+    border-radius: 10px;
+    padding: 20px 50px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.button__top-link {
+    color: $white;
+    background: $blue;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: #2656bb;
+    }
+}
+
+.header__box {
+    height: 700px;
+    padding-top: 200px;
+    background-image: url(./../img/main_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.header__title {
+    max-width: 880px;
+    margin: 0 auto 73px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+    text-align: center;
+    color: $white;
+
+}
+
+.button__box-link {
+    padding: 22px 40px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 145%;
+    color: $white;
+    background: $blue;
+    background-image: url(./../img/button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left 30px center;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: #2656bb;
+        background-image: url(./../img/button.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left 30px center;
+    }
+}

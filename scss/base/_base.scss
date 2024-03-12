@@ -1,4 +1,7 @@
 
+@import url(./../fonts/Gotham/stylesheet.css);
+@import url(./../fonts/Montserrat/stylesheet.css);
+
 // preloader
 
 .mask {
@@ -34,4 +37,14 @@
 
 .hide {
   opacity: 0;
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgb(255, 255, 255);
+
 }
