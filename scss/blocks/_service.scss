@@ -1,0 +1,110 @@
+.main {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.service {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.service__header {
+    margin-bottom: 20px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 135%;
+    color: $black;
+}
+
+.service__header span {
+    color: $red;
+}
+
+.service__text {
+    margin-bottom: 50px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    text-align: center;
+    color: $black;
+}
+
+.service__box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.service__info {
+    max-width: 390px;
+}
+
+.service__info-top {
+    padding: 130px 20px 50px;
+    border: 1.40px solid $gray-border;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: top 60px center;
+}
+
+.service__info-title {
+    margin-bottom: 20px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 135%;
+    text-align: center;
+    color: $black;
+}
+
+.service__info-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 155%;
+    text-align: center;
+    color: $black;
+}
+
+.service__info-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 155%;
+    border: 1px solid $blue;
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(59, 105, 203, 0.1);
+    color: $blue;
+}
+
+.service__info-link span {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 155%;
+    text-align: center;
+    color: $blue;
+}
+
+.item1 {
+    background-image: url(./../img/container2.svg);
+}
+
+.item2 {
+    background-image: url(./../img/employee1.svg);
+}
+
+.item3 {
+    background-image: url(./../img/cruise1.svg);
+}
