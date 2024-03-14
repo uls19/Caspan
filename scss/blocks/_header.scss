@@ -62,11 +62,47 @@
 }
 
 .header__top-lang {
+    position: relative;
     display: flex;
     align-items: center;
+    width: 134px;
     border: 1px solid $gray-border;
     border-radius: 10px;
     align-items: center;
+
+    &_up {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: normal;
+        width: 134px;
+        // border-top: none;
+        /* border-top-left-radius: 0px; */
+        /* border-top-right-radius: 0px; */
+        top: 66px;
+        background: white;
+        left: -1px;
+        opacity: 0;
+
+        animation: shows 0.5s;
+
+        @keyframes shows {
+            from {
+
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.lang_show {
+    display: flex;
+    opacity: 1;
 }
 
 .header__lang {
@@ -81,20 +117,30 @@
     background-repeat: no-repeat, no-repeat;
     background-size: 24px 24px, 14px 5px;
     background-position: left 20px center, right 20px center;
+
+    &_up {
+        padding: 14px 0 14px 54px;
+        background-image: url(./../img/global.svg);
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        background-position: left 20px center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
-.button-link {
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    padding: 20px 50px;
-    font-family: $font-family;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
+.pol_top {
+    background-image: url(./../img/global.svg),
+        url(./../img/polygon1rotated.svg);
 }
+
+
 
 .button__top-link {
+    width: 224px;
+    padding: 20px 0px;
     color: $white;
     background: $blue;
     transition: background 0.2s ease;

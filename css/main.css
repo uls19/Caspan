@@ -129,6 +129,20 @@ legend {
   padding-right: 20px;
 }
 
+.button-link {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.none {
+  display: none;
+}
+
 .header {
   max-width: 1920px;
   margin: 0 auto;
@@ -191,11 +205,40 @@ legend {
 }
 
 .header__top-lang {
+  position: relative;
   display: flex;
   align-items: center;
+  width: 134px;
   border: 1px solid #eee;
   border-radius: 10px;
   align-items: center;
+}
+.header__top-lang_up {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  align-items: normal;
+  width: 134px;
+  /* border-top-left-radius: 0px; */
+  /* border-top-right-radius: 0px; */
+  top: 66px;
+  background: white;
+  left: -1px;
+  opacity: 0;
+  animation: shows 0.5s;
+}
+@keyframes shows {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lang_show {
+  display: flex;
+  opacity: 1;
 }
 
 .header__lang {
@@ -210,19 +253,24 @@ legend {
   background-size: 24px 24px, 14px 5px;
   background-position: left 20px center, right 20px center;
 }
+.header__lang_up {
+  padding: 14px 0 14px 54px;
+  background-image: url(./../img/global.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: left 20px center;
+}
+.header__lang_up:hover {
+  text-decoration: underline;
+}
 
-.button-link {
-  display: flex;
-  justify-content: center;
-  border-radius: 10px;
-  padding: 20px 50px;
-  font-family: "Gotham", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
+.pol_top {
+  background-image: url(./../img/global.svg), url(./../img/polygon1rotated.svg);
 }
 
 .button__top-link {
+  width: 224px;
+  padding: 20px 0px;
   color: #fff;
   background: #3b69cb;
   transition: background 0.2s ease;
@@ -520,7 +568,6 @@ legend {
   max-width: 310px;
   border: 1px solid #fff;
   padding: 20px 0px;
-  font-family: "Gotham", sans-serif;
   color: #fff;
   transition: background 0.2s ease;
 }
@@ -673,7 +720,6 @@ legend {
 .works {
   padding: 100px 0;
   text-align: center;
-  margin-bottom: 400px;
   background: #f1f6ff;
 }
 
@@ -804,16 +850,225 @@ legend {
 }
 
 .works__button-link {
-  display: flex;
   align-items: center;
-  justify-content: center;
   border-radius: 20px;
-  padding: 22px 0px;
+  padding: 20px 0px;
+  border: 1px solid white;
   background: #fff;
   color: #3b69cb;
   transition: background 0.3s ease, color 0.2s ease;
 }
 .works__button-link:hover {
-  background: #2656bb;
+  background: none;
   color: #fff;
+}
+
+.company {
+  min-height: 520px;
+  background-image: url(./../img/stage.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 92px 0;
+}
+
+.company__header {
+  max-width: 495px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 135%;
+  color: #fff;
+}
+
+.company__text {
+  max-width: 620px;
+  padding-top: 30px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+  color: #fff;
+}
+
+.company__text span {
+  font-weight: 500;
+}
+
+.times {
+  padding: 100px 0;
+}
+
+.times__box {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.times__box-image {
+  width: 640px;
+  min-height: 640px;
+  background-image: url(./../img/Rectangle2.jpg), url(./../img/imgs.jpg);
+  background-repeat: no-repeat;
+  background-size: 420px;
+  background-position: right bottom, left top;
+}
+
+.times__box-info {
+  max-width: 580px;
+  min-height: 640px;
+  padding: 44px 0;
+}
+
+.times__header {
+  font-family: "Gotham", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 135%;
+  color: #3a3a3a;
+}
+
+.times__header span {
+  color: #d34e4e;
+}
+
+.times__title {
+  margin-top: 30px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 180%;
+  color: #3a3a3a;
+}
+
+.times__text {
+  margin-top: 10px;
+  font-family: "Gotham", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+  color: #3a3a3a;
+}
+
+.times__button-link {
+  margin-top: 30px;
+  padding: 20px 0;
+  max-width: 310px;
+  background: #3b69cb;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+.times__button-link:hover {
+  background: #2656bb;
+}
+
+.footer {
+  max-width: 1920px;
+  margin: 0 auto;
+  min-height: 240px;
+  padding: 30px 0;
+  background: #f1f6ff;
+}
+
+.footer__top-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__top-contact {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer__link-mail,
+.footer__link-tel {
+  padding-left: 38px;
+  font-family: "Gotham", sans-serif;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3a3a3a;
+  transition: color 0.2s ease;
+}
+.footer__link-mail:hover,
+.footer__link-tel:hover {
+  color: #d34e4e;
+}
+
+.footer__link-mail span,
+.footer__link-tel span {
+  font-family: "Gotham", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #3a3a3a;
+  opacity: 0.5;
+}
+
+.footer__link-mail {
+  background-image: url(./../img/sms-tracking.svg);
+}
+
+.footer__link-tel {
+  background-image: url(./../img/call-calling.svg);
+}
+
+.footer__right-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__top-link {
+  width: 224px;
+  padding: 20px 0;
+  color: #fff;
+  background: #3b69cb;
+  transition: background 0.2s ease;
+}
+.footer__top-link:hover {
+  background: #2656bb;
+}
+
+.footer__line {
+  margin: 30px auto;
+  height: 1px;
+  background: #3b69cb;
+  opacity: 0.2;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__bottom-text {
+  font-family: "Gotham", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3a3a3a;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer__link {
+  width: 40px;
+}
+
+.footer__link img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer__link:hover img {
+  transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,73 @@
+.times {
+    padding: 100px 0;
+
+}
+
+.times__box {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+}
+
+.times__box-image {
+    width: 640px;
+    min-height: 640px;
+    background-image: url(./../img/Rectangle2.jpg),
+        url(./../img/imgs.jpg);
+    background-repeat: no-repeat;
+    background-size: 420px;
+    background-position: right bottom, left top;
+}
+
+.times__box-info {
+    max-width: 580px;
+    min-height: 640px;
+    padding: 44px 0;
+
+}
+
+.times__header {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 135%;
+    color: $black;
+}
+
+.times__header span {
+    color: $red;
+}
+
+.times__title {
+    margin-top: 30px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 180%;
+    color: $black;
+
+}
+
+.times__text {
+    margin-top: 10px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    color: $black;
+
+}
+
+.times__button-link {
+    margin-top: 30px;
+    padding: 20px 0;
+    max-width: 310px;
+    background: $blue;
+    color: $white;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: #2656bb;
+    }
+}

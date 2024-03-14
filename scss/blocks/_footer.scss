@@ -1,0 +1,116 @@
+.footer {
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 240px;
+    padding: 30px 0;
+    background: #f1f6ff;
+}
+
+.footer__top-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__top-contact {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.footer__link-mail,
+.footer__link-tel {
+    padding-left: 38px;
+    font-family: $font-family;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $black;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.footer__link-mail span,
+.footer__link-tel span {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $black;
+    opacity: 0.5;
+}
+
+.footer__link-mail {
+    background-image: url(./../img/sms-tracking.svg);
+}
+
+.footer__link-tel {
+    background-image: url(./../img/call-calling.svg);
+}
+
+.footer__right-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__top-link {
+    width: 224px;
+    padding: 20px 0;
+    color: $white;
+    background: $blue;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: #2656bb;
+    }
+}
+
+.footer__line {
+    margin: 30px auto;
+    height: 1px;
+    background: $blue;
+    opacity: 0.2;
+
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer__bottom-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $black;
+
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.footer__link {
+    width: 40px; 
+}
+
+.footer__link img {
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer__link:hover img {
+    transform: scale(1.1);
+}
