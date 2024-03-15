@@ -145,3 +145,18 @@
         background: #2656bb;
     }
 }
+
+
+@include X-Mobile {
+   
+     .shipowner {
+         padding: 50px 0;
+     }
+    .shipowner__header {
+      font-size: 26px;  
+    }
+
+    .shipowner__button-link {       
+        margin: 0 auto;      
+}
+}

@@ -5,16 +5,83 @@
 }
 
 .header__top-box {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
 
 }
 
+.header__nav-btn {
+
+    display: none;
+}
+
+/* Nav Icon */
+.nav-icon-btn {
+    --time: 0.1s;
+    --width: 40px;
+    --height: 30px;
+    --line-height: 1px;
+    --line-margin: 2;
+    --color: #000000;
+    height: var(--height);
+    width: var(--width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon {
+    position: relative;
+    width: var(--width);
+    height: var(--line-height);
+    background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: var(--width);
+    height: var(--line-height);
+    background-color: var(--color);
+    transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.nav-icon::before {
+    top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+    top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon_active {
+    background-color: transparent;
+}
+
+.nav-icon.nav-icon_active::before,
+.nav-icon.nav-icon_active::after {
+    top: 0;
+    transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon_active::before {
+    transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon_active::after {
+    transform: rotate(-45deg);
+}
+
 .header__top-contact {
     display: flex;
     align-items: center;
     gap: 50px;
+    background: $white;
 }
 
 
@@ -124,7 +191,7 @@
         background-repeat: no-repeat;
         background-size: 24px 24px;
         background-position: left 20px center;
-
+       
         &:hover {
             text-decoration: underline;
         }
@@ -193,5 +260,57 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: left 30px center;
+    }
+}
+
+@include Desktop {
+    .header__link-mail {
+        display: none;
+    }
+}
+
+@include Tablet {
+
+    .header__top-box {
+        align-items: center;
+    }
+
+    .header__nav-btn {
+        display: block;
+    }
+
+    .header__right-box {
+        flex-direction: column-reverse;
+    }
+
+    .header__top-contact {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        margin: 0 auto;
+        top: 180px;
+        gap: 20px;
+        border-radius: 20px;
+        box-shadow: -0.454px 10px 35px 0px rgba(2, 69, 70, 0.19);
+        left: 0;
+        right: 0;
+        max-width: 320px;
+
+    }
+
+    .header__top-contact_mobile {
+        display: flex;
+    }
+}
+
+@include X-Mobile {
+   
+    .header__box {
+        padding: 100px 0 100px 0;
+    }
+    .header__title {
+      font-size: 38px;  
     }
 }

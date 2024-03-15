@@ -155,3 +155,38 @@
         color: $white;
     }
 }
+
+@include X-Mobile {
+    .works {
+        padding: 50px 0; 
+    }
+    .works__header {
+        font-size: 26px;  
+    }
+
+    .works__box {
+        row-gap: 50px;
+    }
+
+    .works__info {
+        width: auto;
+        max-width: 410px;
+        padding: 50px 22px;
+
+    }
+        
+
+    .works__info_number1::before, 
+    .works__info_number2::before, 
+    .works__info_number3::before {
+        top: -31px;
+        right: 0px;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .works__button-link  {
+        max-width: 310px;
+        margin: 0 auto;
+    }
+}

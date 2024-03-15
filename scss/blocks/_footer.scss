@@ -114,3 +114,24 @@
 .footer__link:hover img {
     transform: scale(1.1);
 }
+
+
+@include Desktop {
+    .footer__top-box {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+}
+}
+
+@include Tablet {
+    .footer__top-contact {
+        flex-wrap: wrap;
+    justify-content: center;
+    }
+}
+@include Mobile {
+    .footer__top-contact {
+       gap: 20px;
+    }
+}

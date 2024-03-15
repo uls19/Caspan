@@ -122,6 +122,10 @@ legend {
   opacity: 0;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1320px;
@@ -150,15 +154,81 @@ legend {
 }
 
 .header__top-box {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
+}
+
+.header__nav-btn {
+  display: none;
+}
+
+/* Nav Icon */
+.nav-icon-btn {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #000000;
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.nav-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon_active {
+  background-color: transparent;
+}
+
+.nav-icon.nav-icon_active::before,
+.nav-icon.nav-icon_active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon_active::before {
+  transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon_active::after {
+  transform: rotate(-45deg);
 }
 
 .header__top-contact {
   display: flex;
   align-items: center;
   gap: 50px;
+  background: #fff;
 }
 
 .header__link-mail,
@@ -323,6 +393,48 @@ legend {
   background-position: left 30px center;
 }
 
+@media screen and (max-width: 1199px) {
+  .header__link-mail {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .header__top-box {
+    align-items: center;
+  }
+  .header__nav-btn {
+    display: block;
+  }
+  .header__right-box {
+    flex-direction: column-reverse;
+  }
+  .header__top-contact {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    top: 180px;
+    gap: 20px;
+    border-radius: 20px;
+    box-shadow: -0.454px 10px 35px 0px rgba(2, 69, 70, 0.19);
+    left: 0;
+    right: 0;
+    max-width: 320px;
+  }
+  .header__top-contact_mobile {
+    display: flex;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header__box {
+    padding: 100px 0 100px 0;
+  }
+  .header__title {
+    font-size: 38px;
+  }
+}
 .main {
   max-width: 1920px;
   margin: 0 auto;
@@ -434,6 +546,14 @@ legend {
   background-image: url(./../img/cruise1.svg);
 }
 
+@media screen and (max-width: 575px) {
+  .service {
+    padding: 50px 0;
+  }
+  .service__header {
+    font-size: 26px;
+  }
+}
 .shipper {
   padding: 100px 0;
   background: #3b69cb;
@@ -575,6 +695,14 @@ legend {
   background: #2656bb;
 }
 
+@media screen and (max-width: 575px) {
+  .shipper {
+    padding: 50px 0;
+  }
+  .shipper__header {
+    font-size: 26px;
+  }
+}
 .shipowner {
   min-height: 893px;
   padding-top: 100px;
@@ -717,6 +845,17 @@ legend {
   background: #2656bb;
 }
 
+@media screen and (max-width: 575px) {
+  .shipowner {
+    padding: 50px 0;
+  }
+  .shipowner__header {
+    font-size: 26px;
+  }
+  .shipowner__button-link {
+    margin: 0 auto;
+  }
+}
 .works {
   padding: 100px 0;
   text-align: center;
@@ -863,6 +1002,34 @@ legend {
   color: #fff;
 }
 
+@media screen and (max-width: 575px) {
+  .works {
+    padding: 50px 0;
+  }
+  .works__header {
+    font-size: 26px;
+  }
+  .works__box {
+    row-gap: 50px;
+  }
+  .works__info {
+    width: auto;
+    max-width: 410px;
+    padding: 50px 22px;
+  }
+  .works__info_number1::before,
+  .works__info_number2::before,
+  .works__info_number3::before {
+    top: -31px;
+    right: 0px;
+    left: 0;
+    margin: 0 auto;
+  }
+  .works__button-link {
+    max-width: 310px;
+    margin: 0 auto;
+  }
+}
 .company {
   min-height: 520px;
   background-image: url(./../img/stage.jpg);
@@ -894,6 +1061,29 @@ legend {
   font-weight: 500;
 }
 
+@media screen and (max-width: 1399px) {
+  .company {
+    background-position: right -390px center;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .company {
+    background-position: right -600px center;
+  }
+}
+@media screen and (max-width: 991px) {
+  .company {
+    background-position: left center;
+  }
+}
+@media screen and (max-width: 575px) {
+  .company {
+    padding: 50px 0;
+  }
+  .company__header {
+    font-size: 26px;
+  }
+}
 .times {
   padding: 100px 0;
 }
@@ -961,6 +1151,49 @@ legend {
   background: #2656bb;
 }
 
+@media screen and (max-width: 1199px) {
+  .times {
+    padding: 100px 0 0;
+  }
+  .times__box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .times__box-info {
+    max-width: 720px;
+  }
+  .times__button-link {
+    margin: 30px auto 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .times__box-image {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .times {
+    padding: 50px 0 20px;
+  }
+  .container__times {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .times__box {
+    gap: 0px;
+  }
+  .times__box-info {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .times__box-image {
+    background-size: 420px;
+    background-position: center bottom, center top;
+  }
+  .times__header {
+    font-size: 26px;
+  }
+}
 .footer {
   max-width: 1920px;
   margin: 0 auto;
@@ -1071,4 +1304,23 @@ legend {
 
 .footer__link:hover img {
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__top-box {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer__top-contact {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__top-contact {
+    gap: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */

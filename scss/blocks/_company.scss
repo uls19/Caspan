@@ -27,3 +27,32 @@ color: $white;
 .company__text span {
     font-weight: 500; 
 }
+
+@include X-Desktop {
+    .company {
+        background-position: right -390px center;
+        }
+
+}
+
+@include Desktop {
+    .company {
+        background-position: right -600px center;
+        }
+}
+
+@include Tablet {
+    .company {
+        background-position: left center;
+        }
+}
+
+@include X-Mobile {   
+    .company {
+        padding: 50px 0;
+        }
+
+    .company__header {
+    font-size: 26px;   
+}
+}

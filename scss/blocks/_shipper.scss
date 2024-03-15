@@ -1,5 +1,5 @@
 .shipper {
-   
+
     padding: 100px 0;
     background: $blue;
     background-image: url(./../img/users_div.jpg);
@@ -143,5 +143,17 @@
 
     &:hover {
         background: #2656bb;
+    }
+}
+
+
+@include X-Mobile {
+
+    .shipper {
+        padding: 50px 0;
+    }
+   
+    .shipper__header {
+        font-size: 26px;
     }
 }
